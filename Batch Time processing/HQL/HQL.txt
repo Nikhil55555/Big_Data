@@ -1,0 +1,103 @@
+CQL
+---------------------------------------------------------
+create keyspace GoShopping with replication=
+   ... {
+   ... 'class':'SimpleStrategy',
+   ... 'replication_factor':1
+   ... }
+   ... ;
+ use GoShopping;
+ create table UserIpDetails(
+              ... IP varchar,
+              ... Country varchar,
+              ... State varchar,
+              ... City varchar,
+              ... ApproxLat varchar,
+              ... Approxlng varchar,
+              ... primary key(IP,Country)
+              ... );
+ hadoop fs -mkdir /GoShopping
+hdfs dfs -put '/home/vagrant/bigdata/Dataset/goShopping_WebClicks.dat' /GoShopping
+hdfs dfs -put '/home/vagrant/bigdata/Dataset/goShopping_IpLookup.txt' /GoShopping
+copy UserIpDetails(IP,Country,State,City,ApproxLat,Approxlng)
+              ... from '/home/vagrant/bigdata/Dataset/goShopping_IpLookup.txt'
+              ... with header=true;
+ 
+HQL
+----------------------------------------------------------
+create database GoShopping;
+ use GoShopping;
+ create table GoShopping_WebClicks
+                 > (access_date string,access_time string,hostIp string,cs_method string,customer_ip string,url string,time_spent int,redirectedFrom string,deviceType string)
+                 > row format delimited
+                 > fields terminated by '\t'
+                 > lines terminated by '\n'
+                 > stored as textfile;
+create table GoShopping_IpLookup
+                 > (IP string,Country string,State string,City string,ApproxLat string,ApproxLng string)
+                 > row format delimited
+                 > fields terminated by ','
+                 > lines terminated by '\n'
+                 > stored as textfile;
+ load data local inpath '/home/vagrant/bigdata/Dataset/goShopping_IpLookup.txt' into table GoShopping_IpLookup;
+
+ load data local inpath '/home/vagrant/bigdata/Dataset/goShopping_WebClicks.dat' into table GoShopping_WebClicks;
+
+set hive.exec.dynamic.partition=true;
+set hive.exec.dynamic.partition.mode=nonstrict;
+
+
+ create external table WebClicks_External
+                 > (access_date string,access_time string,hostIp string,cs_method string,customer_ip string,url string,time_spent int,redirectedFrom string)
+                 > partitioned by(deviceType string)
+                 > row format delimited
+                 > fields terminated by '\t'
+                 > lines terminated by '\n'
+                 > stored as textfile;
+ insert into table Webclicks_External
+                 > partition(deviceType)
+                 > select access_date,access_time,hostIp,cs_method,customer_ip,url,time_spent,redirectedFrom,deviceType from GoShopping_WebClicks;
+
+
+ select Country,count(distinct(IP)) from GoShopping_IpLookup group by Country;
+country c1
+IND     4
+UK      8
+USA     11
+
+select sum(w.time_spent),w.customer_ip,i.Country from GoShopping_WebClicks w join GoShopping_IpLookup i on w.customer_ip = i.IP group by i.Country, w.customer_ip;
+
+_c0     w.customer_ip   i.country
+34776   8.37.71.25      IND
+29358   8.37.71.57      IND
+37674   8.37.71.69      IND
+26838   8.37.71.9       IND
+99036   155.100.169.152 UK
+356443  172.189.252.8   UK
+614967  215.82.23.2     UK
+253943  38.68.15.223    UK
+438654  68.199.40.156   UK
+1406717 70.209.14.54    UK
+343161  74.111.6.173    UK
+147042  98.29.25.44     UK
+214452  128.122.140.238 USA
+14112   128.230.122.180 USA
+559909  54.114.107.209  USA
+203646  56.216.127.219  USA
+1554695 74.111.18.59    USA
+72135   8.37.70.112     USA
+89145   8.37.70.170     USA
+61488   8.37.70.226     USA
+76734   8.37.70.77      USA
+71316   8.37.70.99      USA-
++
+101430  8.37.71.43      USA
+
+
+select customer_ip,sum(time_spent) time from GoShopping_WebClicks group by customer_ip order by time desc limit 1;
+customer_ip     max
+74.111.18.59    1554695
+
+ select customer_ip,sum(time_spent) time from GoShopping_WebClicks group by customer_ip order by time limit 1;
+customer_ip     min
+128.230.122.180 14112

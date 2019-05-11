@@ -1,0 +1,13 @@
+[0m[[0m[0minfo[0m] [0m[0mPackaging C:\Spark_Activities\Project\target\scala-2.11\spark-application_2.11-1.0.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	kafka_stream_to_HDFS.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Spark_Activities\Project\target\scala-2.11\classes\kafka_stream_to_HDFS.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	kafka_stream_to_HDFS$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Spark_Activities\Project\target\scala-2.11\classes\kafka_stream_to_HDFS$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	kafka_stream_to_HDFS$$anonfun$main$1$$anonfun$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Spark_Activities\Project\target\scala-2.11\classes\kafka_stream_to_HDFS$$anonfun$main$1$$anonfun$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	kafka_stream_to_HDFS$$anonfun$main$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Spark_Activities\Project\target\scala-2.11\classes\kafka_stream_to_HDFS$$anonfun$main$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	kafka_stream_to_HDFS$$anonfun$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Spark_Activities\Project\target\scala-2.11\classes\kafka_stream_to_HDFS$$anonfun$1.class[0m
+[0m[[0m[0minfo[0m] [0m[0mDone packaging.[0m

@@ -1,0 +1,17 @@
+[0m[[0m[0minfo[0m] [0m[0mPackaging C:\Count_Device\target\scala-2.11\devicecount-application_2.11-1.0.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	CountDevice$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Count_Device\target\scala-2.11\classes\CountDevice$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	CountDevice$$anonfun$3$$anonfun$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Count_Device\target\scala-2.11\classes\CountDevice$$anonfun$3$$anonfun$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	CountDevice$$anonfun$3$$anonfun$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Count_Device\target\scala-2.11\classes\CountDevice$$anonfun$3$$anonfun$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	CountDevice.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Count_Device\target\scala-2.11\classes\CountDevice.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	CountDevice$$anonfun$4.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Count_Device\target\scala-2.11\classes\CountDevice$$anonfun$4.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	CountDevice$$anonfun$3.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Count_Device\target\scala-2.11\classes\CountDevice$$anonfun$3.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	CountDevice$$anonfun$5.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\Count_Device\target\scala-2.11\classes\CountDevice$$anonfun$5.class[0m
+[0m[[0m[0minfo[0m] [0m[0mDone packaging.[0m

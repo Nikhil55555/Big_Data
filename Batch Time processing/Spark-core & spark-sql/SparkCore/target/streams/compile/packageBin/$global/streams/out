@@ -1,0 +1,17 @@
+[0m[[0m[0minfo[0m] [0m[0mPackaging C:\SparkCore\target\scala-2.11\sparkcore-application1_2.11-1.0.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	SparkCore.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\SparkCore\target\scala-2.11\classes\SparkCore.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	SparkCore$$anonfun$4.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\SparkCore\target\scala-2.11\classes\SparkCore$$anonfun$4.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	SparkCore$$anonfun$3.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\SparkCore\target\scala-2.11\classes\SparkCore$$anonfun$3.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	SparkCore$$anonfun$main$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\SparkCore\target\scala-2.11\classes\SparkCore$$anonfun$main$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	SparkCore$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\SparkCore\target\scala-2.11\classes\SparkCore$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	SparkCore$$anonfun$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\SparkCore\target\scala-2.11\classes\SparkCore$$anonfun$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	SparkCore$$anonfun$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\SparkCore\target\scala-2.11\classes\SparkCore$$anonfun$1.class[0m
+[0m[[0m[0minfo[0m] [0m[0mDone packaging.[0m

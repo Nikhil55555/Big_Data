@@ -1,0 +1,29 @@
+********Data Ingestion-HDFS*********
+
+hadoop fs -mkdir /GoShopping
+hadoop fs -put /home/vagrant/goShopping_IpLookup.txt /GoShopping
+
+
+
+********Data ingestion-cassandra**********
+
+create keyspace GoShopping with replication =
+{
+'class' : 'SimpleStrategy',
+'replication_factor' : 1
+};
+
+create table UserIpDetails (
+IP varchar,
+Country varchar,
+State varchar,
+City varchar,
+ApproxLat varchar,
+ApproxLng varchar,
+primary key((Country,State),IP)
+);
+
+
+copy useripdetails
+(IP,Country,State,City,ApproxLat,ApproxLng) 
+from '/home/vagrant/goShopping_IpLookup.txt';
